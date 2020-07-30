@@ -5,12 +5,10 @@ import java.util.List;
 
 public abstract class Car
 {
-	private double finalPrice;
 	private List<Optional> optionals;
 	
 	public Car() 
 	{
-		finalPrice = 0;
 		optionals = new ArrayList<Optional>();
 	}
 
@@ -19,11 +17,22 @@ public abstract class Car
 	public void addOptional(Optional newOptional)
 	{
 		optionals.add(newOptional);
-		finalPrice += newOptional.getPrice();
+	}
+	
+	public double getOptionalsPrices()
+	{
+		double totalPrice = 0;
+		
+		for (Optional optional : optionals) 
+		{
+			totalPrice += optional.getPrice();
+		}
+		
+		return totalPrice;
 	}
 
 	public double getFinalPrice() 
 	{
-		return getBasicPrice() + finalPrice;
+		return getBasicPrice() + getOptionalsPrices();
 	}
 }
