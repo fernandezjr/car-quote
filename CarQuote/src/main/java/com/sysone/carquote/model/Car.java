@@ -19,7 +19,7 @@ public abstract class Car
 		optionals.add(newOptional);
 	}
 	
-	public double getOptionalsPrices()
+	public double getOptionalsTotalPrice()
 	{
 		double totalPrice = 0;
 		
@@ -33,6 +33,6 @@ public abstract class Car
 
 	public double getFinalPrice() 
 	{
-		return getBasicPrice() + getOptionalsPrices();
+		return getBasicPrice() + getOptionalsTotalPrice();
 	}
 }
