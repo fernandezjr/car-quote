@@ -12,7 +12,7 @@ public class CarQuoteApp
     public static void main( String[] args )
     {
         ApplicationContext context = new AnnotationConfigApplicationContext(CarQuoteConfig.class);
-        Car car = context.getBean("coupe", Car.class);
+        Car car = context.getBean("sedanBean", Car.class);
     	
     	car.addOptional(Optional.AB);
         

@@ -1,8 +1,5 @@
 package com.sysone.carquote.model;
 
-import org.springframework.stereotype.Component;
-
-@Component("family")
 public class Family extends Car 
 {
 	@Override
